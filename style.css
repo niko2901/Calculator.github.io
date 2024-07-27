@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #F3EEEA;
+}
+
+.calculator {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid;
+    height: 80%;
+    width: 10%;
+    justify-self: center;
+    background-color: #B0A695;
+}
+
+input {
+    font-weight: 500;
+    border: 1px solid;
+    border-radius: 5px;
+    height: 100%;
+}
+
+input[type="button"] {
+    width: 100px;
+    height: 100%;
+    padding: 20px 40px;
+    font-size: 17px;
+    text-align: center;
+}
+
+input[type="button"]:hover {
+    background-color: #C7C8CC;
+}
+
+input[type="button"]:active {
+    background-color: #B4B4B8;
+}
+
+input[type="text"] {
+    height: 90px;
+    width: 100%;
+    text-align: right;
+    padding: 20px 30px;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+.history {
+    height: 100%;
+    width: 30%;
+    box-shadow: 10px 10px 10px 15px grey;
+    padding: 10px;
+    overflow-y: scroll;
+    contain: content;
+    background-color: #B0A695;
+}
+
+.history > header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history > header > button {
+    width: 25%;
+    height: 30px;
+    margin-right: 15px;
+    border-radius: 15px;
+    border: 1px solid;
+}
+
+.history > header > button:hover {
+    background-color: #C7C8CC;
+
+}
+
+.history > header > button:active {
+    background-color: #B4B4B8;
+}
+
+#recent {
+    display: flex;
+    flex-flow: column;
+}
+
+#recent > div {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-indent: 2%;
+}
+
+.indicator {
+    z-index: 100;
+    position: fixed;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.indicator > span {
+    font-weight: bold;
+    font-size: 17px;
+    margin-inline: 5px;
+    color: lightgrey;
+}
+
+@media screen and (orientation : portrait) {
+    
+    section {
+        height: 200vh;
+        width: 100%;
+        border: 1px solid;
+        flex-flow: column;
+    }
+
+    .calculator {
+        height: 100vh;
+        width: 100%;
+        border: 1px solid;
+    }
+
+    table {
+        width: 90%;
+        height: 70%;
+    }
+
+    input {
+
+    }
+
+    input[type="button"] {
+        height: 100%;
+        width: 50px;
+        padding: 0;
+    }
+
+    input[type="text"] {
+         
+    }
+
+    .history {
+        height: 100vh;
+    }
+}
