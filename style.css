@@ -18,6 +18,7 @@ section {
     width: 70%;
     display: flex;
     flex-flow: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -25,10 +26,15 @@ table {
     padding: 10px;
     border-radius: 10px;
     border: 1px solid;
-    height: 80%;
-    width: 10%;
+    height: 500px;
+    width: 400px;
     justify-self: center;
     background-color: #B0A695;
+}
+
+.proj-name {
+    position: absolute;
+    top: 20px;
 }
 
 input {
@@ -45,6 +51,7 @@ input[type="button"] {
     padding: 20px 40px;
     font-size: 17px;
     text-align: center;
+    text-indent: -2px;
 }
 
 input[type="button"]:hover {
@@ -129,8 +136,16 @@ input[type="text"]:focus {
     color: lightgrey;
 }
 
-@media screen and (orientation : portrait) {
-    
+@media screen and (max-height: 657px)
+{
+    table {
+        height: 300px;
+        width: 400px;
+    }
+}
+
+@media screen and (orientation : portrait) 
+{    
     section {
         height: 200vh;
         width: 100%;
@@ -153,10 +168,6 @@ input[type="text"]:focus {
     table {
         width: 400px;
         height: 500px;
-    }
-
-    input {
-
     }
 
     input[type="button"] {
